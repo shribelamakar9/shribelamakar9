@@ -1,0 +1,16 @@
+.guard{
+    border:5px solid green;
+    border-radius: 10px;
+    width:350px;
+    height: auto;
+    text-align: left;
+    padding: 5px;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    border-spacing: 0.5rem;
+    transform: translate(-50%, -50%);
+   /* width: 100%;*/
+    padding: 0 20px;
+   /*text-align: center;*/
+}

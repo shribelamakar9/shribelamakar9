@@ -1,0 +1,63 @@
+  /* .flatrent{
+    border:2px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    width:1110px;
+    float:left;
+    margin-bottom: 25px;
+}
+
+table
+{
+    color: blueviolet;
+    border: coral;
+    border-radius: 5px;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+button[type=submit]:hover 
+{
+    background-color: rgb(4, 95, 4);
+    cursor: pointer;
+  }
+ */
+
+  .flatrent{
+    border:3px solid navy;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    width: 65%;
+    float:left;
+    /* background-color: rgba(139, 185, 214, 0.425); */
+    /* background-color: rgb(179, 218, 243); */
+    background-color: rgba(182, 227, 255, 0.425);
+    float:left;
+
+    position: absolute;
+    top: 20%; left: 18.5%;
+  
+}
+
+table
+{
+    color: blueviolet;
+    border: coral;
+    border-radius: 10px;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+button[type=submit]:hover 
+{
+    background-color: rgb(4, 95, 4);
+    cursor: pointer;
+  }

@@ -1,0 +1,90 @@
+<div class='guard'>
+
+    <h3 style="text-align:center"> Create Guard</h3>
+
+    <form #guardForm='ngForm' (submit)='createNew(guardForm.value)'>
+        <div class="form-group">
+            <label>  Name </label>
+            <input type="text" class ="form-control" id = "Name"
+               ngModel name = "name" #tname='ngModel' required>
+            <div *ngIf='tname.touched && tname.invalid' class='alert alert-danger'>
+                    OOPS! You missed entering name
+            </div>
+        </div>
+            
+       <div class="form-group">
+        <label> Guard Id</label>
+        <input type="number" class ="form-control" id = "id"
+            ngModel name = "userId" #tid='ngModel' required>
+        </div>
+
+        <div *ngIf='tid.touched && tid.invalid' class='alert alert-danger'>
+            OOPS! You missed entering id
+    </div>  
+
+        <div class="form-group">
+            <label> Salary</label>
+            <input type="number" class ="form-control" id = "sal"
+                ngModel name = "amount" #tsalary='ngModel' required>
+            <div *ngIf='tsalary.touched && tsalary.invalid' class='alert alert-danger'>
+                    OOPS! You missed entering salary
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label> Status</label>
+            <input type="text" class ="form-control" id = "status"
+                ngModel name = "status" #tstatus='ngModel' required>
+            <div *ngIf='tstatus.touched && tstatus.invalid' class='alert alert-danger'>
+                    OOPS! You missed entering status
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label> Shift</label>
+            <input type="text" class ="form-control" id = "shift"
+                ngModel name = "shift" #tshift='ngModel' required>
+            <div *ngIf='tshift.touched && tshift.invalid' class='alert alert-danger'>
+                    OOPS! You missed entering shift
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label> Mobile No</label>
+            <input type="text" class ="form-control" id = "mobile"
+                ngModel name = "mobileNo" #tmobile='ngModel' required minlength="10" pattern='[0-9]*'>
+            <div *ngIf='tmobile.touched && tmobile.invalid' >
+                <div *ngIf='tmobile.errors.required' class='alert alert-danger'>
+                    OOPS! You missed entering mobile
+                </div>
+                <div *ngIf='tmobile.errors.minlength' class='alert alert-danger'>
+                    Mobile  should be 10 letters
+                </div>
+                <div *ngIf='tmobile.errors.pattern' class='alert alert-danger'>
+                    Mobile should be only numeric
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label> Start Date</label>
+            <input type="date" class ="form-control" id = "date"
+                ngModel name = "date" #tdate='ngModel' required>
+            <div *ngIf='tdate.touched && tdate.invalid' class='alert alert-danger'>
+                    OOPS! You missed entering date
+            </div>
+        </div>
+
+        <button type='submit' class='btn btn-primary btn-block'[disabled]='guardForm.invalid'>Submit</button>
+        
+    </form>
+
+    <p *ngIf='message != null' [ngClass]='msgClass'  (click)='gotoList()'>{{message}}! Click to Go to List  </p>
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+
+    </div>

@@ -1,0 +1,18 @@
+.guard{
+    border:5px solid green;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin: 30px;
+    width:350px;
+    height: auto;
+  
+   /* padding: 5px;*/
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+input.ng-touched.ng-invalid{
+    border: 3px solid red;
+}

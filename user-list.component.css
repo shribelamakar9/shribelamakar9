@@ -1,0 +1,17 @@
+.maindiv{
+    border:3px solid green;
+    border-radius: 10px;
+    margin:75px;
+    margin:50px;
+    width:900px;
+    text-align: left;
+    height: auto;
+  /*  float:left;*/
+    position: absolute;
+    top: 10%;
+}
+
+.subdiv {
+    border:none;
+    width:400;
+}

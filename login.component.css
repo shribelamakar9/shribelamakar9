@@ -1,0 +1,20 @@
+input.ng-touched.ng-invalid{
+    border:3px solid red;
+    border-radius: 5px;
+}
+
+.login{
+    border:3px solid green;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-left: 32%;
+    margin-top: 10%;
+    width: 410px;
+    /* height: auto; */
+  
+   /* padding: 5px;*/
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}

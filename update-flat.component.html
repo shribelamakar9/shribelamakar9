@@ -1,0 +1,50 @@
+<div class='flat'>
+
+    <h3> <b>Update Flat Details</b> </h3>
+
+    <div *ngIf='failMessage==null'>
+
+        <table class='table'>
+
+            <tr>
+                <td>Flat Number</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flat.flatNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Owner Name</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flat.ownerName' ></td>
+
+    
+            </tr>
+
+            <tr>
+                <td>Floor Number</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flat.floorNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Flat Type</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flat.flatType'></td>
+            </tr>
+
+        </table>
+        <button (click)='update()' class='btn btn-success btn-block'>Update</button>
+
+    </div>
+    <div *ngIf='failMessage != null'>
+        {{failMessage}}
+    </div>
+
+    <!-- Below message to be clicked to navigate back to flat-list component-->
+    <div *ngIf='message != null' [ngClass]='msgClass' (click)='gotoList()'>
+        {{message}}! Click to go back
+    </div>
+
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+</div>

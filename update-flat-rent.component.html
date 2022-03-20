@@ -1,0 +1,129 @@
+<!-- <div class='flatrentupdate'>
+
+    <div *ngIf='failMessage==null'>
+
+        <table class='renttable'>
+
+            <tr>
+                <td>Flat Number</td>
+                <td><input type='number' class='rentform-control' [(ngModel)]='flatrent.flatEntity.flatNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Owner Name</td>
+                <td><input type='text' class='rentform-control' [(ngModel)]='flatrent.flatEntity.ownerName' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Floor Number</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.flatEntity.floorNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Flat Type</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.flatEntity.flatType' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Flat Rent Id</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flatrent.flatRentId' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Rent Amount</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flatrent.amount' ></td>
+            </tr>
+
+            <tr>
+                <td>Payment Type</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.paymentType' ></td>
+            </tr> 
+
+        </table>
+
+        <button (click)='update()' class='btn btn-success btn-block'>Update Rent Details</button>
+
+    </div>
+
+    <div *ngIf='failMessage != null'>
+        {{failMessage}}
+    </div>
+
+    Below message to be clicked to navigate back to flat-list  component
+    <div *ngIf='message != null' [ngClass]='msgClass' (click)='gotoList()'>
+        {{message}}! Click to go back
+    </div>
+
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+
+</div> -->
+
+
+<div class='flatrent'>
+
+    <h3> Update Flat Details</h3>
+
+    <div *ngIf='failMessage==null'>
+
+        <table class='table'>
+
+            <tr>
+                <td>Flat Number</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flatrent.flatEntity.flatNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Owner Name</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.flatEntity.ownerName' ></td>
+            </tr>
+
+            <tr>
+                <td>Floor Number</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.flatEntity.floorNo' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Flat Type</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.flatEntity.flatType' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Flat Rent Id</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flatrent.flatRentId' readonly></td>
+            </tr>
+
+            <tr>
+                <td>Rent Amount</td>
+                <td><input type='number' class='form-control' [(ngModel)]='flatrent.amount' ></td>
+            </tr>
+
+            <tr>
+                <td>Payment Type</td>
+                <td><input type='text' class='form-control' [(ngModel)]='flatrent.paymentType' ></td>
+            </tr> 
+
+
+        </table>
+        <button (click)='update()' class='btn btn-success btn-block'>Update</button>
+
+    </div>
+    <div *ngIf='failMessage != null'>
+        {{failMessage}}
+    </div>
+
+    <!-- Below message to be clicked to navigate back to flat-list component-->
+    <div *ngIf='message != null' [ngClass]='msgClass' (click)='gotoList()'>
+        {{message}}! Click to go back
+    </div>
+
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+/* .maindiv{
+    border:2px solid rgba(0, 110, 255, 0.39);
+    background-color: rgba(139, 185, 214, 0.425);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    width:100%;
+    float:left;
+    text-align: center;
+}
+
+.form-group
+{
+    float: right;
+}
+
+h3
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+tr:nth-child(odd){background-color: rgb(252, 41, 157)}
+
+button[type=delete]:hover 
+{
+   
+    cursor: pointer;
+  } */
+
+
+
+  .maindiv
+{
+/* border:2px solid rgba(0, 110, 255, 0.39); */
+border:3px solid navy;
+/* background-color: rgba(139, 185, 214, 0.425); */
+/* background-color: rgb(179, 218, 243); */
+background-color: rgba(182, 227, 255, 0.425);
+border-radius: 10px;
+padding: 25px;
+margin-left: 50px; 
+/* position: absolute;
+top: 20%; left: 9%;
+width: 65%; */
+margin-top: -30px; 
+
+position: absolute;
+    top: 20.5%; left: 14%;
+    width: 65%;
+
+
+  text-align: center;
+}
+
+input.ng-touched.ng-invalid
+{
+    border: 2px red;
+    border-style:solid;
+}
+
+
+h3
+{
+    color: navy;
+    margin-top: 25px;
+ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.form-group
+{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+
+.form-group
+{
+    float: right;
+}
+
+
+
+/* tr:nth-child(odd){background-color: rgb(253, 171, 216)} */
+tr:nth-child(odd){background-color: rgb(255, 189, 225)}
+
+button[type=delete]:hover 
+{
+   
+    cursor: pointer;
+  }

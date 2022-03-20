@@ -1,0 +1,77 @@
+<div class='user'>
+
+    <h3 style="text-align:center"> Add User</h3>
+
+    <form #userForm='ngForm' (submit)='createNew(userForm.value)'>
+         <div class='form-group'>
+            <label for='vid'>RoleId</label>
+            <input id='vid' class='form-control' type='text' ngModel name='roleId' #tempId='ngModel' required>
+        </div> 
+        <div *ngIf='tempId.touched && tempId.invalid' class='alert alert-danger'>
+            OOPS! You missed entering roleId
+        </div>  
+
+        <div class='form-group'>
+            <label for='nm'>User Name</label>
+            <input id='nm' class='form-control' type='text' ngModel name='userName'
+            #tname='ngModel' required minlength="4" pattern="[A-Za-z]*">
+        </div>
+        <div *ngIf='tname.touched && tname.invalid'>
+            <div *ngIf='tname.errors.required' class='alert alert-danger'>
+                Please enter userName
+            </div>
+            <div *ngIf='tname.errors.minlength' class='alert alert-danger'>
+                Name should be minimum 4 letters
+            </div>
+            <div *ngIf='tname.errors.pattern' class='alert alert-danger'>
+                Name should be only alphabetic
+            </div>
+        </div>
+     <div class='form-group'>
+         <label for='log'>LoginID</label>
+         <input id='log' class='form-control' type='text' ngModel name='loginId' #tloginId='ngModel' required>
+     </div>
+     <div *ngIf='tloginId.touched && tloginId.invalid' class='alert alert-danger'>
+        Please enter the loginId
+    </div> 
+
+    <div class='form-group'>
+        <label for='pwd'>PASSWORD</label>
+        <input id='pwd' class='form-control' type='text' ngModel name='password' #tpwd='ngModel' required>
+    </div>
+    <div *ngIf='tpwd.touched && tpwd.invalid' class='alert alert-danger'>
+        Please enter the password
+    </div>
+    <div class='form-group'>
+        <label for='mNo'>MobileNo</label>
+        <input id='mNo' class='form-control' type='text' ngModel name='mobileNo' #tmNo='ngModel' required>
+    </div>
+    <div *ngIf='tmNo.touched && tmNo.invalid' class='alert alert-danger'>
+        Please enter the mobileNo
+    </div>
+    <div class='form-group'>
+        <label for='eid'>EmailID</label>
+        <input id='eid' class='form-control' type='text' ngModel name='emailId' #teid='ngModel' required>
+    </div>
+    <div *ngIf='teid.touched && teid.invalid' class='alert alert-danger'>
+        Please enter the emailId
+    </div>
+    <div class='form-group'>
+        <label for='rl'>ROLE</label>
+        <input id='rl' class='form-control' type='text' ngModel name='role' #trl='ngModel' required>
+    </div>
+    <div *ngIf='trl.touched && trl.invalid' class='alert alert-danger'>
+        Please enter the ROLE
+    </div>
+
+    <button type='submit' class='btn btn-primary btn-block' [disabled]='userForm.invalid'>Submit</button>
+    </form>
+
+    <p *ngIf='message != null' [ngClass]='msgClass'  (click)='gotoList()'>{{message}}! Click to Goto List  </p>
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+</div>

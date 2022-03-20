@@ -1,0 +1,54 @@
+<div class='guard'>
+    <div *ngIf='failMessage==null'>
+    <table class='table' >
+        
+        <tr>
+            <td>Guard Name</td>
+            <td><input type='text'  class='form-control' [(ngModel)]='guard.name'></td>
+        </tr>
+        <tr>
+            <td>Guard Id</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.userId' readonly></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.amount'></td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.status'></td>
+        </tr>
+        <tr>
+            <td>Start Date</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.date' ></td>
+        </tr>
+        <tr>
+            <td>shift</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.shift'></td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type='text' class='form-control' [(ngModel)]='guard.mobileNo'></td>
+        </tr>
+        
+      
+    </table>
+    <button (click)='updateg()' class='btn btn-success btn-block'>Update</button>
+
+    </div>
+    <div *ngIf='failMessage != null'>
+        {{failMessage}}
+        </div>
+        
+    
+    <div *ngIf='message != null' [ngClass]='msgClass' (click)='gotoList()'>
+        {{message}}! Click to go back
+    </div>
+
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+</div>

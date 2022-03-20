@@ -1,0 +1,121 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment Management App</title>
+  <!-- <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a class="nav_title" href="#">Apartment App</a>
+
+        </div>
+
+        <ul>
+          <!-- <li><a href="#">Home</a></li> -->
+          <li>
+            <a routerLink="home" class="btn btn-primary">Home</a>
+          </li>
+
+          <li>
+            <a routerLink="login" class="btn btn-primary">Sign in</a>
+          </li>
+
+         
+
+
+          <div class="dropdown">
+            <button class="dropbtn">User
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <!-- <a routerLink="login" class="btn btn-primary">Sign In</a> -->
+              <a routerLink="addNewuser" class="btn btn-primary">Add New User</a>
+              <a routerLink="userList" class="btn btn-primary">User List</a>
+            </div>
+          </div>
+
+
+          <div class="dropdown">
+            <button class="dropbtn">Guard
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="addNew" class="btn btn-primary">Create Guard</a>
+              <a routerLink="guardList" class="btn btn-primary">Guard List</a>
+            </div>
+          </div>
+
+
+
+          <div class="dropdown">
+            <button class="dropbtn">Flat
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="addFlat" class="btn btn-primary">Create New Flat</a>
+              <a routerLink="flatList" class="btn btn-primary">Flat List</a>
+              <a routerLink="addFlatRent" class="btn btn-primary">Create New Flat-Rent</a>
+              <a routerLink="flatRentList" class="btn btn-primary">Flat Rent List</a>
+               <a routerLink="logout" class="btn btn-primary">Sign Out</a>
+            </div>
+          </div>
+
+
+
+          <li><a href="#">Delivey</a></li>
+
+
+          
+          <div class="dropdown">
+            <button class="dropbtn">Visitor
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="addVisitor" class="btn btn-primary">Create New Visitor</a>
+              <a routerLink="visitorsList" class="btn btn-primary">Visitors List</a>
+            </div>
+          </div>
+
+
+          <li><a href="#">Vehicle</a></li>
+
+
+
+          <!-- <a routerLink="logout" class="btn btn-primary">Sign Out</a> -->
+
+
+        </ul>
+      </div>
+    </nav>
+    <div class='pages'>
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+  <!--<div class="img"></div>
+    <div class="center">
+      <div class="title">Apartment Management Application</div>
+      <div class="sub_title">Welcome to Apartment Management Application</div>
+      <div class="sub_title1"> It's a platform to ask questions and connect with people who contribute unique insights and
+        quality answers</div>
+      <div class="btns">
+        <button>Learn More</button>
+        <button>About Us</button>
+      </div>
+    </div>-->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<div class='maindiv'>
+    <h2> Guard List</h2>
+    <div class="form-group col-md-4">
+        <input type="text" class="form-control"  placeholder="Enter Keyword for filter result" [(ngModel)]="searchedKeyword">
+      </div>
+        <table class = "table ">
+             <thead>
+                <tr>
+                    <th> Name</th>
+                    <th> User Id </th>
+                    <th> Salary</th>
+                    <th> Status </th>
+                    <th> Shift </th>
+                    <th> Mobile </th>
+                    <th> Date </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr *ngFor = 'let guard of guards | filter:searchedKeyword'>
+                <td> {{ guard.name }} </td>
+                <td> {{ guard.userId }} </td>
+                <td> {{ guard.amount }} </td>
+                <td> {{ guard.status }} </td>
+                <td> {{ guard.shift }} </td>
+                <td> {{ guard.mobileNo }} </td>
+                <td> {{ guard.date }} </td>
+                <td>
+                    <button class='btn btn-danger' (click)='delete(guard.userId)'>Delete</button>
+                    <a [routerLink]="['/updateg',guard.userId]" class='btn btn-primary'>Update</a>
+                    
+                </td>
+            </tr>
+        </tbody>
+
+    
+    </table>
+<div *ngIf='failMessage != null'>
+    <h3>{{failMessage}}</h3>
+</div>
+
+<p *ngIf='message != null' class='alert alert-danger' (click)='message=null'>
+    {{message}}
+</p>
+</div>

@@ -1,0 +1,21 @@
+div{
+    
+    border:2px solid green;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    /* margin: 30px; */
+    margin-left: 35%;
+    margin-top: 15%;
+
+    width: 575px;
+    
+    text-align: center;
+  
+   /* padding: 5px;*/
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+   /* margin:30px;*/
+    /* width:auto; */
+}

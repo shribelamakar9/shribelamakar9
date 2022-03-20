@@ -1,0 +1,123 @@
+<div class='newFlatRent'>
+
+    <h3 style="text-align:center"><b> Create Flat Rent </b></h3>
+
+
+    <form #flatRentForm='ngForm' (submit)='createNew(flatRentForm.value)'>
+
+
+        <!--    Flat number -->
+        <div class='form-group'>
+            <label for='fid'>Flat Number</label>
+            <input id='fid' class='form-control' type='number' ngModel name='flatNo' #tflatNo='ngModel'
+                placeholder="Flat Number" required>
+
+            <div *ngIf='tflatNo.touched && tflatNo.invalid' class='alert alert-danger'>
+                Please enter Flat number. This field required
+            </div>
+        </div>
+
+
+
+        <!-- Owner name-->
+        <div class='form-group'>
+            <label for='nm'>Owner Name</label>
+            <input id='nm' class='form-control' type='text' ngModel name='ownerName' #townerName='ngModel'
+                placeholder="Owner Name" minlength="4" pattern="[A-Za-z]*" required>
+
+            <div *ngIf='townerName.touched && townerName.invalid'>
+                <div *ngIf='townerName.errors.required' class='alert alert-danger'>
+                    Please enter Owner name
+                </div>
+                <div *ngIf='townerName.errors.minlength' class='alert alert-danger'>
+                    Name should be minimum 4 letters
+                </div>
+                <div *ngIf='townerName.errors.pattern' class='alert alert-danger'>
+                    Name should be only alphabetic
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Floor number-->
+        <div class='form-group'>
+            <label for='flno'>Floor Number</label>
+            <input id='flno' class='form-control' type='text' ngModel name='floorNo' #tfloorNo='ngModel'
+                placeholder="Floor Number" required>
+
+            <div *ngIf='tfloorNo.touched && tfloorNo.invalid' class='alert alert-danger'>
+                Please enter Floor Number. This field required
+            </div>
+        </div>
+
+
+
+        <!-- Flat Type-->
+        <div class='form-group'>
+            <label for='ft'>Flat Type</label>
+            <input id='ft' class='form-control' type='text' ngModel name='flatType' #tflatType='ngModel'
+                placeholder="Flat Type" required>
+
+            <div *ngIf='tflatType.touched && tflatType.invalid'>
+                <div *ngIf='tflatType.errors.required' class='alert alert-danger'>
+                    Please enter Type of Flat
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--    Flat Rent Id -->
+        <div class='form-group'>
+            <label for='frid'>Flat Rent Id</label>
+            <input id='frid' class='form-control' type='number' ngModel name='flatRentId' #tflatRentId='ngModel'
+            placeholder="Rent Id" required>
+
+            <div *ngIf='tflatRentId.touched && tflatRentId.invalid' class='alert alert-danger'>
+                Please enter Flat Rent Id. This field required
+            </div>
+        </div>
+
+
+        <!-- Rent Amount -->
+        <div class='form-group'>
+            <label for='rent'>Rent Amount</label>
+            <input id='rent' class='form-control' type='number' ngModel name='amount' #tamount='ngModel' placeholder="In Rupees " required>
+
+            <div *ngIf='tamount.touched && tamount.invalid' class='alert alert-danger'>
+                Please enter Amount. This field required
+            </div>
+        </div>
+
+
+
+        <!-- Payment Type-->
+        <div class='form-group'>
+
+            <label for='frt'>Payment Type </label>
+            <input id='frt' class='form-control' type='text' ngModel name='paymentType' #tpaymentType='ngModel'
+            placeholder="Cash / Online "required>
+
+            <div *ngIf='tpaymentType.touched && tpaymentType.invalid'>
+                <div *ngIf='tpaymentType.errors.required' class='alert alert-danger'>
+                    Please enter Payment Type
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <button type='submit' class='btn btn-primary btn-block' [disabled]='flatRentForm.invalid'>Submit</button>
+    </form>
+
+
+    <p *ngIf='message != null' [ngClass]='msgClass' (click)='gotoList()'>{{message}}! Click to Goto List </p>
+    <div *ngIf='validationMessages != null' (click)='validationMessages=null'>
+
+        <p *ngFor='let msg of validationMessages' class='alert alert-danger'>
+            {{msg}}
+        </p>
+    </div>
+</div>
